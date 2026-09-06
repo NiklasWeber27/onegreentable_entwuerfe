@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>one_green table — Ein Tisch. Ein Menü. Ein Abend.</title>
+<meta name="description" content="one_green table in Innsbruck-Pradl: ein gemeinsamer Tisch, ein fixes mehrgängiges Überraschungsmenü — bio, regional, saisonal.">
+<meta name="robots" content="index, follow">
+<!-- TODO: canonical + og:url auf die echte Domain setzen, sobald die Seite live ist -->
+<!-- <link rel="canonical" href="https://www.onegreentable.at/"> -->
+<meta property="og:title" content="one_green table — Ein Tisch. Ein Menü. Ein Abend.">
+<meta property="og:description" content="Ein gemeinsamer Tisch in Innsbruck-Pradl, ein fixes mehrgängiges Überraschungsmenü — bio, regional, saisonal.">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:locale" content="de_AT">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f2f0ea">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' rx='8' fill='%237c6448'/%3E%3Ccircle cx='30' cy='30' r='16' fill='none' stroke='%23f2f0ea' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "one_green table",
+  "servesCuisine": ["Vegetarian", "Vegan"],
+  "description": "Ein gemeinsamer Tisch in Innsbruck-Pradl mit fixem, mehrgängigem Überraschungsmenü — bio, regional, saisonal.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Defreggerstraße 21",
+    "postalCode": "6020",
+    "addressLocality": "Innsbruck",
+    "addressCountry": "AT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.2651564,
+    "longitude": 11.4091554
+  },
+  "telephone": "+43 660 6590525",
+  "email": "onegreentable.ibk@gmail.com",
+  "priceRange": "€€€",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "19:00",
+      "closes": "22:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "86"
+  },
+  "sameAs": [
+    "https://instagram.com/one_greentable",
+    "https://facebook.com/p/One_green-table-100088518796555"
+  ]
+}
+</script>
+</head>
+<body>
+<noscript>
+  <div style="max-width:640px;margin:60px auto;padding:0 24px;font-family:sans-serif;line-height:1.6;">
+    <h1>one_green table — Ein Tisch. Ein Menü. Ein Abend.</h1>
+    <p>Bei one_green table sitzen alle Gäste an einem großen Tisch und bekommen ein fixes, mehrgängiges Überraschungsmenü — bio, regional, saisonal. Geleitet von Sonja Kapplmüller, Defreggerstraße 21, 6020 Innsbruck.</p>
+    <p>Öffnungszeiten: Di–Sa, 19:00–22:00 Uhr. Telefon: +43 660 6590525. E-Mail: onegreentable.ibk@gmail.com</p>
+    <p>Bitte aktivieren Sie JavaScript, um die vollständige Seite zu sehen.</p>
+  </div>
+</noscript>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-name" id="nav-name">one_green table</div>
+    <div class="nav-links">
+      <a href="#philosophie">Idee</a>
+      <a href="#abend">Der Abend</a>
+      <a href="#wand">Stimmen</a>
+      <a href="#einblicke">Einblicke</a>
+      <a href="#lage">Lage</a>
+      <a href="#reservierung" class="nav-cta">Reservieren</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="panel tape">
+    <div class="hero-eyebrow mono" id="hero-eyebrow"></div>
+    <h1 id="hero-headline"></h1>
+    <p class="hero-sub" id="hero-sub"></p>
+    <div class="hero-cta-row">
+      <a class="btn" href="#reservierung">Tisch reservieren</a>
+      <a class="scroll-hint" href="#philosophie">Mehr erfahren <span>↓</span></a>
+    </div>
+  </div>
+</header>
+
+<section id="philosophie" class="panel-wrap">
+  <div class="wrap">
+    <div class="panel tilt-l pin-red">
+      <h2 id="philosophy-heading"></h2>
+      <div class="philosophy-grid">
+        <p class="philosophy-quote" id="philosophy-quote"></p>
+        <div class="philosophy-side">
+          <span class="philosophy-badge" id="philosophy-badge"></span>
+          <div id="philosophy-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="abend" class="panel-wrap">
+  <div class="wrap">
+    <div class="panel tilt-r tape-r">
+      <h2 id="concept-heading"></h2>
+      <p class="concept-note" id="concept-note"></p>
+      <div class="facts-strip" id="concept-facts"></div>
+    </div>
+  </div>
+</section>
+
+<section id="wand" class="reviews-section">
+  <div class="wrap">
+    <h2 id="reviews-heading"></h2>
+    <div class="reviews-meta" id="reviews-meta"></div>
+    <div class="review-wall" id="review-wall"></div>
+    <a class="reviews-link" href="https://www.google.com/maps/place/?q=place_id:ChIJhWFKpUZpnUcRqAbULKBQ7oY" target="_blank" rel="noopener">Alle Bewertungen auf Google ansehen →</a>
+  </div>
+</section>
+
+<section id="einblicke" class="panel-wrap">
+  <div class="wrap">
+    <div class="panel tilt-l">
+      <h2 id="gallery-heading"></h2>
+      <div id="gallery-body"></div>
+    </div>
+  </div>
+</section>
+
+<section id="reservierung" class="panel-wrap">
+  <div class="wrap">
+    <div class="panel tilt-r tape">
+      <h2 id="reservation-heading"></h2>
+      <div class="reservation">
+        <div class="reservation-intro">
+          <svg class="reservation-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M11 5v13a4 4 0 0 0 4 4v13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M11 5v9M15 5v9M19 5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M29 5c-4 0-6 4-6 9s2 6.5 6 8v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p id="reservation-text"></p>
+          <span class="hours-tag mono" id="reservation-hours"></span>
+          <div class="contact-block" id="reservation-contact"></div>
+          <p class="form-hint mono" id="reservation-formhint">
+            <span id="reservation-formhint-text"></span>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </p>
+        </div>
+        <form class="res-form" id="res-form">
+          <div class="res-form-row">
+            <div>
+              <label for="res-name">Name</label>
+              <input type="text" id="res-name" name="name" required>
+            </div>
+            <div>
+              <label for="res-people">Personen</label>
+              <input type="text" id="res-people" name="people" placeholder="z.B. 2">
+            </div>
+          </div>
+          <div class="res-form-row">
+            <div>
+              <label for="res-email">E-Mail</label>
+              <input type="email" id="res-email" name="email" required>
+            </div>
+            <div>
+              <label for="res-date">Wunschtermin</label>
+              <input type="text" id="res-date" name="date" placeholder="Datum wählen" autocomplete="off">
+              <span class="field-note mono" id="res-date-note">nur Di–Sa buchbar</span>
+            </div>
+          </div>
+          <div>
+            <label for="res-message">Nachricht</label>
+            <textarea id="res-message" name="message" placeholder="Allergien, Anlass, Wünsche ..."></textarea>
+          </div>
+          <button type="submit" class="btn" id="res-submit">Platz anfragen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lage" class="panel-wrap">
+  <div class="wrap">
+    <div class="panel tilt-l pin-brass">
+      <h2 id="hours-heading"></h2>
+      <div class="hours-grid">
+        <div>
+          <div class="address" id="hours-address"></div>
+          <div class="map-note" id="hours-mapnote"></div>
+          <div class="map-frame">
+            <iframe id="hours-map" title="Lage auf Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="hours-box">
+          <span class="hours-box-label mono">Öffnungszeiten</span>
+          <div id="hours-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; width:100%;">
+    <span id="footer-copy"></span>
+    <div class="footer-legal">
+      <div class="footer-links" id="footer-links"></div>
+      <span>·</span>
+      <a href="datenschutz.html">Datenschutz</a>
+      <span>·</span>
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/l10n/de.js"></script>
+<script>
+const FALLBACK_CONTENT = {
+  "meta": {
+    "restaurantName": "one_green table",
+    "tagline": "Ein Tisch für alle.",
+    "phone": "+43 660 6590525",
+    "email": "onegreentable.ibk@gmail.com",
+    "instagram": "one_greentable",
+    "facebook": "p/One_green-table-100088518796555"
+  },
+  "hero": {
+    "eyebrow": "PRADL, INNSBRUCK",
+    "headline": "Ein Tisch. Ein Menü. Ein Abend.",
+    "subtext": "Bei one_green table sitzen alle Gäste an einem großen Tisch und bekommen ein fixes, mehrgängiges Überraschungsmenü — bio, regional, saisonal, mit Einflüssen aus aller Welt. Geleitet von Sonja Kapplmüller in der Defreggerstraße in Pradl."
+  },
+  "philosophy": {
+    "heading": "Die Idee dahinter",
+    "badge": "SEIT 2023 — SONJA KAPPLMÜLLER",
+    "paragraphs": [
+      "Ein Tisch statt vieler Tische. Bis zu zwölf Gäste sitzen gemeinsam — mal allein reserviert, mal in kleiner Runde mit fremden Gesichtern, die man am Ende des Abends nicht mehr fremd nennt.",
+      "Bio, regional und saisonal sind die Basis. Dazu bringt Sonja Einflüsse aus der ganzen Welt in die Küche — je nachdem, was die Saison gerade hergibt.",
+      "Vegetarisch, vegan auf Wunsch, ohne Dogma — einfach ehrlich gutes Essen mit klarem Fokus auf Qualität."
+    ]
+  },
+  "concept": {
+    "heading": "Der Abend",
+    "note": "Kein Bestellen von der Karte — ein fixes Menü, das der Abend selbst schreibt.",
+    "facts": [
+      {
+        "value": "5 Gänge",
+        "label": "Überraschungsmenü, wechselt saisonal"
+      },
+      {
+        "value": "12 Plätze",
+        "label": "an einem gemeinsamen Tisch"
+      },
+      {
+        "value": "ca. 44 €",
+        "label": "pro Person, Getränke separat"
+      }
+    ]
+  },
+  "reviews": {
+    "heading": "An der Wand",
+    "note": "Ausgewählte Stimmen von Google — im Original oft länger, hier gekürzt.",
+    "ratingValue": "4.9",
+    "ratingCount": "86",
+    "items": [
+      {
+        "quote": "Ein einzigartiges Konzept — und Sonja bringt bei jedem Gang echtes Können und Herzblut mit.",
+        "rating": 5
+      },
+      {
+        "quote": "Der Abend hier war einer der besten, die wir je hatten. Man merkt die Leidenschaft in jedem Teller.",
+        "rating": 5
+      },
+      {
+        "quote": "Fünf Gänge, ein großer Tisch, echte Gastfreundschaft — genau das haben wir an diesem Abend erlebt.",
+        "rating": 5
+      },
+      {
+        "quote": "Ein Tisch, fremde Gesichter, ein geteiltes Menü — ungewohnt offen und herzlich für Österreich.",
+        "rating": 5
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "Einblicke",
+    "images": []
+  },
+  "reservation": {
+    "heading": "Platz reservieren",
+    "text": "Schreib uns kurz, wir bestätigen deinen Platz per E-Mail zurück.",
+    "hoursNote": "Di – Sa, ab 19:00 Uhr",
+    "formHint": "Oder gleich das Formular ausfüllen",
+    "ctaLabel": "Platz anfragen"
+  },
+  "hoursLocation": {
+    "heading": "Öffnungszeiten & Lage",
+    "address": "Defreggerstraße 21, 6020 Innsbruck",
+    "hours": [
+      {
+        "days": "Di – Sa",
+        "time": "19:00 – 22:00"
+      },
+      {
+        "days": "So, Mo",
+        "time": "Geschlossen"
+      }
+    ],
+    "mapNote": "Pradl, wenige Gehminuten vom Pradler Platz",
+    "mapQuery": "Defreggerstraße 21, 6020 Innsbruck"
+  }
+};
+
+async function loadContent() {
+  try {
+    const res = await fetch('content.json');
+    if (!res.ok) throw new Error('nicht gefunden');
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    render(FALLBACK_CONTENT);
+  }
+}
+
+function render(data) {
+  const { meta, hero, philosophy, concept, reviews, gallery, reservation, hoursLocation } = data;
+
+  document.title = `${meta.restaurantName} — ${meta.tagline}`;
+  document.getElementById('nav-name').textContent = meta.restaurantName;
+
+  document.getElementById('hero-eyebrow').textContent = hero.eyebrow;
+  document.getElementById('hero-headline').textContent = hero.headline;
+  document.getElementById('hero-sub').textContent = hero.subtext;
+
+  document.getElementById('philosophy-heading').textContent = philosophy.heading;
+  document.getElementById('philosophy-quote').textContent = philosophy.paragraphs[0] || '';
+  document.getElementById('philosophy-badge').textContent = philosophy.badge || '';
+  document.getElementById('philosophy-body').innerHTML =
+    philosophy.paragraphs.slice(1).map(p => `<p>${escapeHtml(p)}</p>`).join('');
+
+  document.getElementById('concept-heading').textContent = concept.heading;
+  document.getElementById('concept-note').textContent = concept.note || '';
+  document.getElementById('concept-facts').innerHTML = concept.facts.map(f => `
+    <div class="fact">
+      <div class="fact-value">${escapeHtml(f.value)}</div>
+      <div class="fact-label mono">${escapeHtml(f.label)}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('reviews-heading').textContent = reviews.heading;
+  document.getElementById('reviews-meta').innerHTML =
+    `<strong>${escapeHtml(reviews.ratingValue)} ★</strong><span>${escapeHtml(reviews.ratingCount)} Google-Bewertungen — ${escapeHtml(reviews.note || '')}</span>`;
+  document.getElementById('review-wall').innerHTML = reviews.items.map(r => `
+    <div class="review-card">
+      <div class="review-pin"></div>
+      <div class="review-stars mono">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+      <p class="review-quote">„${escapeHtml(r.quote)}"</p>
+    </div>
+  `).join('');
+
+  document.getElementById('gallery-heading').textContent = gallery.heading;
+  const galBody = document.getElementById('gallery-body');
+  if (gallery.images && gallery.images.length > 0) {
+    galBody.className = 'gallery-grid';
+    galBody.innerHTML = gallery.images.map(src => `<div><img src="${src}" alt="${meta.restaurantName}" loading="lazy"></div>`).join('');
+  } else {
+    galBody.className = 'gallery-placeholder';
+    galBody.innerHTML = ['Foto folgt', 'Foto folgt', 'Foto folgt'].map(label => `
+      <div class="gallery-frame">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="4" y="10" width="32" height="23" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M13 10l2.5-4h9l2.5 4" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="20" cy="21.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="mono">${escapeHtml(label)}</span>
+      </div>
+    `).join('');
+  }
+
+  document.getElementById('reservation-heading').textContent = reservation.heading;
+  document.getElementById('reservation-text').textContent = reservation.text;
+  document.getElementById('reservation-hours').textContent = reservation.hoursNote || '';
+  document.getElementById('reservation-formhint-text').textContent = reservation.formHint || '';
+  document.getElementById('res-submit').textContent = reservation.ctaLabel;
+  const contactLines = [];
+  if (meta.phone) contactLines.push(`<a class="contact-line" href="tel:${meta.phone.replace(/\s+/g, '')}">${escapeHtml(meta.phone)}</a>`);
+  if (meta.email) contactLines.push(`<a class="contact-line" href="mailto:${meta.email}">${escapeHtml(meta.email)}</a>`);
+  document.getElementById('reservation-contact').innerHTML = contactLines.join('');
+
+  // Datumsfeld: echter Kalender, So & Mo direkt ausgegraut/nicht wählbar
+  const dateInput = document.getElementById('res-date');
+  let picker = null;
+  if (window.flatpickr) {
+    picker = window.flatpickr(dateInput, {
+      locale: window.flatpickr.l10ns && window.flatpickr.l10ns.de ? 'de' : undefined,
+      dateFormat: 'Y-m-d',
+      altInput: true,
+      altFormat: 'd.m.Y',
+      minDate: 'today',
+      allowInput: false,
+      disable: [ (date) => date.getDay() === 0 || date.getDay() === 1 ]
+    });
+  }
+
+  const resForm = document.getElementById('res-form');
+  resForm.onsubmit = (e) => {
+    e.preventDefault();
+    const name = document.getElementById('res-name').value;
+    const people = document.getElementById('res-people').value;
+    const email = document.getElementById('res-email').value;
+    const date = dateInput.value;
+    const message = document.getElementById('res-message').value;
+    const subject = `Tischanfrage — ${name}`;
+    const bodyLines = [
+      `Name: ${name}`,
+      `E-Mail: ${email}`,
+      people ? `Personen: ${people}` : null,
+      date ? `Wunschtermin: ${date}` : null,
+      message ? `Nachricht: ${message}` : null
+    ].filter(Boolean);
+    const mailBody = bodyLines.join('\n');
+    window.location.href = `mailto:${meta.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailBody)}`;
+    const submitBtn = document.getElementById('res-submit');
+    const originalLabel = reservation.ctaLabel;
+    submitBtn.textContent = 'E-Mail-Programm geöffnet ✓';
+    setTimeout(() => { submitBtn.textContent = originalLabel; }, 4000);
+  };
+
+  document.getElementById('hours-heading').textContent = hoursLocation.heading;
+  document.getElementById('hours-address').textContent = hoursLocation.address;
+  document.getElementById('hours-mapnote').textContent = hoursLocation.mapNote || '';
+  const mapQuery = hoursLocation.mapQuery || hoursLocation.address;
+  document.getElementById('hours-map').src = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`;
+  document.getElementById('hours-list').innerHTML = hoursLocation.hours.map(h => `
+    <div class="hours-row"><span>${escapeHtml(h.days)}</span><span>${escapeHtml(h.time)}</span></div>
+  `).join('');
+
+  document.getElementById('footer-copy').textContent = `© ${new Date().getFullYear()} ${meta.restaurantName}`;
+  const footerLinks = document.getElementById('footer-links');
+  const links = [];
+  if (meta.instagram) links.push(`<a href="https://instagram.com/${meta.instagram}" target="_blank" rel="noopener">Instagram</a>`);
+  if (meta.facebook) links.push(`<a href="https://facebook.com/${meta.facebook}" target="_blank" rel="noopener">Facebook</a>`);
+  if (meta.email) links.push(`<a href="mailto:${meta.email}">${meta.email}</a>`);
+  footerLinks.innerHTML = links.join('');
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+loadContent();
+
+// Aktiven Nav-Link beim Scrollen hervorheben
+const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+const sections = navLinks
+  .map(a => document.querySelector(a.getAttribute('href')))
+  .filter(Boolean);
+
+if ('IntersectionObserver' in window && sections.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const link = navLinks.find(a => a.getAttribute('href') === `#${entry.target.id}`);
+      if (!link) return;
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+  sections.forEach(s => observer.observe(s));
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "restaurantName": "one_green table",
+    "tagline": "Ein Tisch für alle.",
+    "phone": "+43 660 6590525",
+    "email": "onegreentable.ibk@gmail.com",
+    "instagram": "one_greentable",
+    "facebook": "p/One_green-table-100088518796555"
+  },
+  "hero": {
+    "eyebrow": "PRADL, INNSBRUCK",
+    "headline": "Ein Tisch. Ein Menü. Ein Abend.",
+    "subtext": "Bei one_green table sitzen alle Gäste an einem großen Tisch und bekommen ein fixes, mehrgängiges Überraschungsmenü — bio, regional, saisonal, mit Einflüssen aus aller Welt. Geleitet von Sonja Kapplmüller in der Defreggerstraße in Pradl."
+  },
+  "philosophy": {
+    "heading": "Die Idee dahinter",
+    "badge": "SEIT 2023 — SONJA KAPPLMÜLLER",
+    "paragraphs": [
+      "Ein Tisch statt vieler Tische. Bis zu zwölf Gäste sitzen gemeinsam — mal allein reserviert, mal in kleiner Runde mit fremden Gesichtern, die man am Ende des Abends nicht mehr fremd nennt.",
+      "Bio, regional und saisonal sind die Basis. Dazu bringt Sonja Einflüsse aus der ganzen Welt in die Küche — je nachdem, was die Saison gerade hergibt.",
+      "Vegetarisch, vegan auf Wunsch, ohne Dogma — einfach ehrlich gutes Essen mit klarem Fokus auf Qualität."
+    ]
+  },
+  "concept": {
+    "heading": "Der Abend",
+    "note": "Kein Bestellen von der Karte — ein fixes Menü, das der Abend selbst schreibt.",
+    "facts": [
+      { "value": "5 Gänge", "label": "Überraschungsmenü, wechselt saisonal" },
+      { "value": "12 Plätze", "label": "an einem gemeinsamen Tisch" },
+      { "value": "ca. 44 €", "label": "pro Person, Getränke separat" }
+    ]
+  },
+  "reviews": {
+    "heading": "An der Wand",
+    "note": "Ausgewählte Stimmen von Google — im Original oft länger, hier gekürzt.",
+    "ratingValue": "4.9",
+    "ratingCount": "86",
+    "items": [
+      { "quote": "Ein einzigartiges Konzept — und Sonja bringt bei jedem Gang echtes Können und Herzblut mit.", "rating": 5 },
+      { "quote": "Der Abend hier war einer der besten, die wir je hatten. Man merkt die Leidenschaft in jedem Teller.", "rating": 5 },
+      { "quote": "Fünf Gänge, ein großer Tisch, echte Gastfreundschaft — genau das haben wir an diesem Abend erlebt.", "rating": 5 },
+      { "quote": "Ein Tisch, fremde Gesichter, ein geteiltes Menü — ungewohnt offen und herzlich für Österreich.", "rating": 5 }
+    ]
+  },
+  "gallery": {
+    "heading": "Einblicke",
+    "images": []
+  },
+  "reservation": {
+    "heading": "Platz reservieren",
+    "text": "Schreib uns kurz, wir bestätigen deinen Platz per E-Mail zurück.",
+    "hoursNote": "Di – Sa, ab 19:00 Uhr",
+    "formHint": "Oder gleich das Formular ausfüllen",
+    "ctaLabel": "Platz anfragen"
+  },
+  "hoursLocation": {
+    "heading": "Öffnungszeiten & Lage",
+    "address": "Defreggerstraße 21, 6020 Innsbruck",
+    "hours": [
+      { "days": "Di – Sa", "time": "19:00 – 22:00" },
+      { "days": "So, Mo", "time": "Geschlossen" }
+    ],
+    "mapNote": "Pradl, wenige Gehminuten vom Pradler Platz",
+    "mapQuery": "Defreggerstraße 21, 6020 Innsbruck"
+  }
+}
