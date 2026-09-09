@@ -9,7 +9,7 @@
   },
   "hero": {
     "eyebrow": "PRADL, INNSBRUCK",
-    "headline": "Ein Tisch. Ein Menü. Ein Abend.",
+    "headline": "Ein Tisch. Ein Menü.\nEin Abend.",
     "subtext": "Bei one_green table sitzen alle Gäste an einem großen Tisch und bekommen ein fixes, mehrgängiges Überraschungsmenü — bio, regional, saisonal, mit Einflüssen aus aller Welt. Geleitet von Sonja Kapplmüller in der Defreggerstraße in Pradl."
   },
   "philosophy": {
@@ -31,7 +31,7 @@
     ]
   },
   "reviews": {
-    "heading": "An der Wand",
+    "heading": "Stimmen",
     "note": "Ausgewählte Stimmen von Google — im Original oft länger, hier gekürzt.",
     "ratingValue": "4.9",
     "ratingCount": "86",
@@ -39,7 +39,11 @@
       { "quote": "Ein einzigartiges Konzept — und Sonja bringt bei jedem Gang echtes Können und Herzblut mit.", "rating": 5 },
       { "quote": "Der Abend hier war einer der besten, die wir je hatten. Man merkt die Leidenschaft in jedem Teller.", "rating": 5 },
       { "quote": "Fünf Gänge, ein großer Tisch, echte Gastfreundschaft — genau das haben wir an diesem Abend erlebt.", "rating": 5 },
-      { "quote": "Ein Tisch, fremde Gesichter, ein geteiltes Menü — ungewohnt offen und herzlich für Österreich.", "rating": 5 }
+      { "quote": "Ein Tisch, fremde Gesichter, ein geteiltes Menü — ungewohnt offen und herzlich für Österreich.", "rating": 5 },
+      { "quote": "Wir waren sogar ein zweites Mal da, bevor wir uns getraut haben zu bewerten — das Konzept hält, was es verspricht.", "rating": 5 },
+      { "quote": "Fast schon Sterne-Niveau — und Sonja macht das alles ganz allein, mit spürbarer Hingabe.", "rating": 5 },
+      { "quote": "Saisonal, meist bio, auf Wunsch vegan — dazu Naturweine und alkoholfreie Cocktails, alles mit Bedacht ausgewählt.", "rating": 5 },
+      { "quote": "Ein Silvesterabend am großen Tisch: fünf Gänge, kreativ und mit viel Geschmack zubereitet.", "rating": 5 }
     ]
   },
   "gallery": {

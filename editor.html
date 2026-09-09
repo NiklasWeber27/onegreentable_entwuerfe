@@ -3,170 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>One Green Table — Inhalte bearbeiten</title>
+<title>one_green table — Inhalte bearbeiten</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2060%2060%22%3E%3Crect%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2212%22%20fill%3D%22%232f8452%22/%3E%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20font-family%3D%22Georgia%2C%20serif%22%20font-style%3D%22italic%22%20font-size%3D%2234%22%20font-weight%3D%22600%22%20fill%3D%22%23fbfaf6%22%20text-anchor%3D%22middle%22%3Eg%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Courier+Prime:wght@400;700&family=Inter:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap');
+  :root {
+    --bg: #f2f0ea; --panel: #fbfaf6; --ink: #242220; --muted: #6f6a5f;
+    --line: #ddd7c7; --accent: #2f8452; --accent-dark: #1f6a41; --danger: #a8433f;
+  }
   * { box-sizing: border-box; }
-  body {
-    margin: 0; background: #faf9f6; color: #1c1c1a;
-    font-family: 'Inter', sans-serif; font-weight: 300;
-  }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  .mono { font-family: 'Courier Prime', monospace; }
+
   header {
-    background: #1c1c1a; color: #fff; padding: 26px 32px;
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    background: var(--ink); color: var(--bg); padding: 22px 28px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+    position: sticky; top: 0; z-index: 10;
   }
-  header h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.3rem; margin: 0; }
-  header p { margin: 0; font-size: 0.85rem; color: #ccc; }
-  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px 100px; }
-  .panel {
-    background: #fff; border: 1px solid #e5e3dc; border-radius: 4px;
-    padding: 24px; margin-bottom: 22px;
+  header h1 { margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-style: italic; font-size: 1.5rem; }
+  header p { margin: 3px 0 0; color: #bcb6a5; font-size: 0.82rem; }
+  .status { font-family: 'Courier Prime', monospace; font-size: 0.75rem; color: var(--accent); min-height: 1em; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 140px; }
+
+  .note {
+    background: var(--panel); border: 1px solid var(--line); padding: 20px 24px;
+    margin: 26px 0; font-size: 0.92rem; line-height: 1.6;
   }
-  .panel h2 {
-    font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.15rem;
-    margin: 0 0 18px; padding-bottom: 12px; border-bottom: 1px solid #e5e3dc;
+  .note h3 {
+    margin: 0 0 10px; font-family: 'Courier Prime', monospace; font-size: 0.75rem;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-dark);
   }
-  label { display: block; font-size: 0.82rem; color: #6b6b66; margin: 14px 0 5px; }
-  label:first-of-type { margin-top: 0; }
-  input[type=text], input[type=email], input[type=tel], input[type=color], textarea {
-    width: 100%; padding: 9px 10px; border: 1px solid #d8d6cf; border-radius: 3px;
-    font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 300; color: #1c1c1a;
-    background: #fff;
+  .note ol { margin: 0; padding-left: 20px; }
+  .note li { margin-bottom: 6px; }
+  .note code { background: var(--bg); padding: 1px 6px; font-family: 'Courier Prime', monospace; font-size: 0.85em; }
+
+  section.block { margin: 34px 0; }
+  .block h2 { font-family: 'Fraunces', serif; font-weight: 400; font-style: italic; font-size: 1.4rem; margin: 0 0 4px; }
+  .block .hint {
+    font-family: 'Courier Prime', monospace; font-size: 0.72rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; display: block;
   }
-  textarea { resize: vertical; min-height: 60px; }
-  .row { display: flex; gap: 14px; }
-  .row > div { flex: 1; }
-  .category-block, .item-row, .gallery-row {
-    border: 1px dashed #d8d6cf; border-radius: 3px; padding: 14px; margin-bottom: 14px; position: relative;
+
+  label {
+    display: block; font-family: 'Courier Prime', monospace; font-size: 0.7rem;
+    letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin: 14px 0 6px;
   }
-  .item-row, .gallery-row { display: flex; gap: 10px; align-items: flex-end; border: none; padding: 0; margin-bottom: 10px; }
-  .item-row > div, .gallery-row > div { flex: 1; }
-  button {
-    font-family: 'Inter', sans-serif; font-size: 0.85rem; cursor: pointer;
-    border-radius: 3px; padding: 8px 14px; border: 1px solid #1c1c1a; background: #fff; color: #1c1c1a;
+  input[type=text], input[type=email], input[type=tel], textarea, select {
+    width: 100%; font-family: 'Inter', sans-serif; font-size: 0.96rem; padding: 11px 13px;
+    background: var(--panel); border: 1px solid var(--line); color: var(--ink);
   }
-  button:hover { background: #1c1c1a; color: #fff; }
-  .btn-remove {
-    border-color: #9c3848; color: #9c3848; padding: 8px 10px; font-size: 0.8rem; flex: 0 0 auto;
+  textarea { resize: vertical; min-height: 70px; }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent); }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  @media (max-width: 640px) { .row2, .row3 { grid-template-columns: 1fr; } }
+
+  .card-item {
+    background: var(--panel); border: 1px solid var(--line); padding: 18px 18px 8px;
+    margin-bottom: 14px; position: relative;
   }
-  .btn-remove:hover { background: #9c3848; color: #fff; }
-  .btn-add { margin-top: 6px; }
-  .cat-title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-  .cat-title-row input { max-width: 220px; }
-  .save-bar {
-    position: fixed; bottom: 0; left: 0; right: 0; background: #1c1c1a; color: #fff;
-    padding: 16px 24px; display: flex; justify-content: center; gap: 14px; align-items: center; flex-wrap: wrap;
+  .card-item .remove {
+    position: absolute; top: 14px; right: 16px; background: none; border: none; cursor: pointer;
+    font-family: 'Courier Prime', monospace; font-size: 0.7rem; color: var(--danger); letter-spacing: 0.03em;
+    padding: 0;
   }
-  .save-bar button { background: #fff; color: #1c1c1a; border: none; font-weight: 500; }
-  .save-bar button:hover { background: #d9a441; }
-  .save-bar .hint { color: #ccc; font-size: 0.8rem; }
-  .file-input-label {
-    border: 1px solid #ccc; color: #fff; background: transparent;
+  .card-item .remove:hover { text-decoration: underline; }
+
+  .add-btn {
+    font-family: 'Courier Prime', monospace; font-size: 0.78rem; letter-spacing: 0.03em;
+    background: transparent; border: 1px dashed var(--muted); color: var(--ink);
+    padding: 10px 16px; cursor: pointer; margin-top: 4px; transition: border-color .2s, color .2s;
   }
+  .add-btn:hover { border-color: var(--accent); color: var(--accent-dark); border-style: solid; }
+
+  footer.bar {
+    position: fixed; bottom: 0; left: 0; right: 0; background: var(--ink); color: var(--bg);
+    padding: 16px 24px; display: flex; align-items: center; justify-content: center; gap: 14px;
+    flex-wrap: wrap; box-shadow: 0 -8px 24px -12px rgba(0,0,0,0.3); z-index: 20;
+  }
+  .btn {
+    font-family: 'Courier Prime', monospace; font-size: 0.8rem; letter-spacing: 0.03em;
+    padding: 12px 22px; cursor: pointer; border: 1px solid var(--bg);
+  }
+  .btn-solid { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+  .btn-solid:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+  .btn-outline { background: transparent; color: var(--bg); }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); }
+  input[type=file] { display: none; }
 </style>
 </head>
 <body>
 
 <header>
   <div>
-    <h1>One Green Table — Inhalte bearbeiten</h1>
-    <p>Änderungen hier speichern die neue content.json auf deinem Computer. Anschließend die Datei im Website-Ordner ersetzen.</p>
+    <h1>one_green table — Inhalte bearbeiten</h1>
+    <p>Kein Programmieren nötig · exportiert content.json</p>
   </div>
-  <div>
-    <input type="file" id="fileInput" accept=".json" style="display:none">
-    <button class="file-input-label" onclick="document.getElementById('fileInput').click()">Andere content.json laden</button>
-  </div>
+  <span class="status mono" id="status"></span>
 </header>
 
-<div class="container">
+<div class="wrap">
 
-  <div class="panel">
-    <h2>Allgemein</h2>
-    <label>Restaurantname</label>
-    <input type="text" id="meta-restaurantName">
-    <div class="row">
-      <div>
-        <label>Telefon</label>
-        <input type="tel" id="meta-phone">
-      </div>
-      <div>
-        <label>E-Mail</label>
-        <input type="email" id="meta-email">
-      </div>
-    </div>
-    <div class="row">
-      <div>
-        <label>Instagram (nur Benutzername)</label>
-        <input type="text" id="meta-instagram">
-      </div>
-      <div>
-        <label>Facebook (nur Benutzername)</label>
-        <input type="text" id="meta-facebook">
-      </div>
-    </div>
+  <div class="note">
+    <h3>So funktioniert's</h3>
+    <ol>
+      <li>Felder unten ausfüllen oder ändern (Texte, Öffnungszeiten, Bewertungen, ...).</li>
+      <li>Ganz unten auf <strong>„content.json speichern"</strong> klicken — du bekommst eine Datei namens <code>content.json</code>.</li>
+      <li>Diese Datei im Website-Ordner hochladen und die alte <code>content.json</code> damit ersetzen.</li>
+      <li>Die Website lädt die neuen Inhalte automatisch beim nächsten Aufruf — kein weiterer Schritt nötig.</li>
+    </ol>
   </div>
 
-  <div class="panel">
+  <div class="note">
+    Schon mal bearbeitet? Lade deine aktuelle <code>content.json</code> hier, um darin weiterzuarbeiten:
+    <br><br>
+    <label for="fileInput" class="add-btn" style="display:inline-block;">Datei laden</label>
+    <input type="file" id="fileInput" accept="application/json">
+  </div>
+
+  <section class="block">
+    <h2>Allgemein</h2>
+    <span class="hint">Name, Kontakt, Social Media</span>
+    <label>Restaurantname</label>
+    <input type="text" id="meta-restaurantName">
+    <div class="row2">
+      <div><label>Telefon</label><input type="tel" id="meta-phone"></div>
+      <div><label>E-Mail</label><input type="email" id="meta-email"></div>
+    </div>
+    <div class="row2">
+      <div><label>Instagram (nur Benutzername)</label><input type="text" id="meta-instagram"></div>
+      <div><label>Facebook (nur Benutzername)</label><input type="text" id="meta-facebook"></div>
+    </div>
+  </section>
+
+  <section class="block">
     <h2>Startbereich</h2>
+    <span class="hint">Text ganz oben auf der Seite</span>
     <label>Kleiner Hinweistext oben (z.B. "Restaurant in Pradl")</label>
     <input type="text" id="hero-eyebrow">
     <label>Hauptüberschrift</label>
     <input type="text" id="hero-headline">
     <label>Untertext</label>
     <textarea id="hero-subtext"></textarea>
-  </div>
+  </section>
 
-  <div class="panel">
+  <section class="block">
     <h2>Philosophie</h2>
+    <span class="hint">Eure Geschichte, kurz erzählt</span>
     <label>Überschrift</label>
     <input type="text" id="philosophy-heading">
     <label>Kleines Sticker-Badge (z.B. "Seit 2023 · Name")</label>
     <input type="text" id="philosophy-badge">
     <label>Absätze (jeder Absatz in einer eigenen Zeile — der erste wird groß als Zitat gezeigt)</label>
     <textarea id="philosophy-paragraphs" style="min-height:140px"></textarea>
-  </div>
+  </section>
 
-  <div class="panel">
+  <section class="block">
     <h2>Der Abend</h2>
+    <span class="hint">Die Eckdaten des Menüs</span>
     <label>Überschrift</label>
     <input type="text" id="concept-heading">
     <label>Kurzer Hinweistext</label>
     <input type="text" id="concept-note">
     <div id="concept-facts"></div>
-    <button class="btn-add" onclick="addFact()">+ Eckdatum hinzufügen</button>
-  </div>
+    <button class="add-btn" onclick="addFact()">+ Eckdatum hinzufügen</button>
+  </section>
 
-  <div class="panel">
-    <h2>An der Wand (Google-Bewertungen)</h2>
+  <section class="block">
+    <h2>Stimmen</h2>
+    <span class="hint">Google-Bewertungen — es werden bei jedem Seitenaufruf zufällig 4 davon gezeigt</span>
     <label>Überschrift</label>
     <input type="text" id="reviews-heading">
     <label>Hinweistext</label>
     <input type="text" id="reviews-note">
-    <div class="row">
-      <div>
-        <label>Bewertung (z.B. 4.9)</label>
-        <input type="text" id="reviews-ratingValue">
-      </div>
-      <div>
-        <label>Anzahl Bewertungen</label>
-        <input type="text" id="reviews-ratingCount">
-      </div>
+    <div class="row2">
+      <div><label>Bewertung (z.B. 4.9)</label><input type="text" id="reviews-ratingValue"></div>
+      <div><label>Anzahl Bewertungen</label><input type="text" id="reviews-ratingCount"></div>
     </div>
     <div id="review-items"></div>
-    <button class="btn-add" onclick="addReview()">+ Bewertung hinzufügen</button>
-  </div>
+    <button class="add-btn" onclick="addReview()">+ Bewertung hinzufügen</button>
+  </section>
 
-  <div class="panel">
-    <h2>Einblicke / Galerie</h2>
+  <section class="block">
+    <h2>Einblicke</h2>
+    <span class="hint">Bild-Links für die Galerie</span>
     <label>Überschrift</label>
     <input type="text" id="gallery-heading">
-    <label>Bild-Links</label>
     <div id="gallery-images"></div>
-    <button class="btn-add" onclick="addGalleryImage()">+ Bild hinzufügen</button>
-  </div>
+    <button class="add-btn" onclick="addGalleryImage()">+ Bild hinzufügen</button>
+  </section>
 
-  <div class="panel">
+  <section class="block">
     <h2>Reservierung</h2>
+    <span class="hint">Text und Beschriftungen rund ums Formular</span>
     <label>Überschrift</label>
     <input type="text" id="reservation-heading">
     <label>Text</label>
@@ -177,10 +209,11 @@
     <input type="text" id="reservation-formHint">
     <label>Button-Beschriftung</label>
     <input type="text" id="reservation-ctaLabel">
-  </div>
+  </section>
 
-  <div class="panel">
-    <h2>Öffnungszeiten & Lage</h2>
+  <section class="block">
+    <h2>Öffnungszeiten &amp; Lage</h2>
+    <span class="hint">Adresse und Öffnungstage</span>
     <label>Überschrift</label>
     <input type="text" id="hours-heading">
     <label>Adresse</label>
@@ -188,24 +221,31 @@
     <label>Hinweis zur Lage (z.B. "5 Gehminuten vom Pradler Platz")</label>
     <input type="text" id="hours-mapNote">
     <div id="hours-list"></div>
-    <button class="btn-add" onclick="addHoursRow()">+ Zeile hinzufügen</button>
-  </div>
-
+    <button class="add-btn" onclick="addHoursRow()">+ Zeile hinzufügen</button>
+  </section>
 
 </div>
 
-<div class="save-bar">
-  <span class="hint">Vergiss nicht: nach dem Speichern die alte content.json im Ordner ersetzen.</span>
-  <button onclick="saveJson()">content.json speichern</button>
-</div>
+<footer class="bar">
+  <button class="btn btn-outline" onclick="document.getElementById('fileInput').click()">Datei laden</button>
+  <button class="btn btn-solid" onclick="saveJson()">content.json speichern</button>
+</footer>
 
 <script>
 let data = null;
 
+function setStatus(msg) {
+  const el = document.getElementById('status');
+  el.textContent = msg;
+  setTimeout(() => { if (el.textContent === msg) el.textContent = ''; }, 3500);
+}
+
 async function init() {
   try {
-    const res = await fetch('content.json');
+    const res = await fetch('content.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('missing');
     data = await res.json();
+    setStatus('Aktuelle Inhalte geladen');
   } catch (e) {
     data = defaultData();
   }
@@ -217,8 +257,13 @@ document.getElementById('fileInput').addEventListener('change', (e) => {
   if (!file) return;
   const reader = new FileReader();
   reader.onload = (evt) => {
-    data = JSON.parse(evt.target.result);
-    populate();
+    try {
+      data = JSON.parse(evt.target.result);
+      populate();
+      setStatus('Datei geladen: ' + file.name);
+    } catch (err) {
+      setStatus('Konnte Datei nicht lesen — ist es eine gültige content.json?');
+    }
   };
   reader.readAsText(file);
 });
@@ -268,66 +313,51 @@ function renderFacts() {
   wrap.innerHTML = '';
   data.concept.facts.forEach((fact, fi) => {
     const row = document.createElement('div');
-    row.className = 'item-row';
+    row.className = 'card-item';
     row.innerHTML = `
-      <div style="flex:0 0 130px">
-        <input type="text" placeholder="z.B. 5 Gänge" value="${escAttr(fact.value)}" onchange="data.concept.facts[${fi}].value = this.value">
+      <button class="remove" onclick="removeFact(${fi})">entfernen</button>
+      <div class="row2">
+        <div><label>Wert</label><input type="text" placeholder="z.B. 5 Gänge" value="${escAttr(fact.value)}" onchange="data.concept.facts[${fi}].value = this.value"></div>
+        <div><label>Beschreibung</label><input type="text" placeholder="Beschreibung" value="${escAttr(fact.label)}" onchange="data.concept.facts[${fi}].label = this.value"></div>
       </div>
-      <div>
-        <input type="text" placeholder="Beschreibung" value="${escAttr(fact.label)}" onchange="data.concept.facts[${fi}].label = this.value">
-      </div>
-      <button class="btn-remove" onclick="removeFact(${fi})">×</button>
     `;
     wrap.appendChild(row);
   });
 }
-function addFact() {
-  data.concept.facts.push({ value: '', label: '' });
-  renderFacts();
-}
-function removeFact(fi) {
-  data.concept.facts.splice(fi, 1);
-  renderFacts();
-}
+function addFact() { data.concept.facts.push({ value: '', label: '' }); renderFacts(); }
+function removeFact(fi) { data.concept.facts.splice(fi, 1); renderFacts(); }
 
 function renderReviews() {
   const wrap = document.getElementById('review-items');
   wrap.innerHTML = '';
   data.reviews.items.forEach((rev, ri) => {
     const row = document.createElement('div');
-    row.className = 'category-block';
+    row.className = 'card-item';
     row.innerHTML = `
-      <div class="cat-title-row">
-        <select onchange="data.reviews.items[${ri}].rating = parseInt(this.value)" style="max-width:90px">
-          ${[5,4,3,2,1].map(n => `<option value="${n}" ${rev.rating === n ? 'selected' : ''}>${n} ★</option>`).join('')}
-        </select>
-        <button class="btn-remove" onclick="removeReview(${ri})">Entfernen</button>
-      </div>
-      <textarea placeholder="Zitat der Bewertung" onchange="data.reviews.items[${ri}].quote = this.value">${escAttr(rev.quote)}</textarea>
+      <button class="remove" onclick="removeReview(${ri})">entfernen</button>
+      <label>Sterne</label>
+      <select style="max-width:100px" onchange="data.reviews.items[${ri}].rating = parseInt(this.value)">
+        ${[5,4,3,2,1].map(n => `<option value="${n}" ${rev.rating === n ? 'selected' : ''}>${n} ★</option>`).join('')}
+      </select>
+      <label>Zitat</label>
+      <textarea onchange="data.reviews.items[${ri}].quote = this.value">${escHtml(rev.quote)}</textarea>
     `;
     wrap.appendChild(row);
   });
 }
-function addReview() {
-  data.reviews.items.push({ quote: '', rating: 5 });
-  renderReviews();
-}
-function removeReview(ri) {
-  data.reviews.items.splice(ri, 1);
-  renderReviews();
-}
+function addReview() { data.reviews.items.push({ quote: '', rating: 5 }); renderReviews(); }
+function removeReview(ri) { data.reviews.items.splice(ri, 1); renderReviews(); }
 
 function renderGalleryImages() {
   const wrap = document.getElementById('gallery-images');
   wrap.innerHTML = '';
   (data.gallery.images || []).forEach((src, gi) => {
     const row = document.createElement('div');
-    row.className = 'gallery-row';
+    row.className = 'card-item';
     row.innerHTML = `
-      <div>
-        <input type="text" placeholder="Bild-Link (URL)" value="${escAttr(src)}" onchange="data.gallery.images[${gi}] = this.value">
-      </div>
-      <button class="btn-remove" onclick="removeGalleryImage(${gi})">×</button>
+      <button class="remove" onclick="removeGalleryImage(${gi})">entfernen</button>
+      <label>Bild-Link (URL)</label>
+      <input type="text" value="${escAttr(src)}" onchange="data.gallery.images[${gi}] = this.value">
     `;
     wrap.appendChild(row);
   });
@@ -337,37 +367,26 @@ function addGalleryImage() {
   data.gallery.images.push('');
   renderGalleryImages();
 }
-function removeGalleryImage(gi) {
-  data.gallery.images.splice(gi, 1);
-  renderGalleryImages();
-}
+function removeGalleryImage(gi) { data.gallery.images.splice(gi, 1); renderGalleryImages(); }
 
 function renderHoursRows() {
   const wrap = document.getElementById('hours-list');
   wrap.innerHTML = '';
   data.hoursLocation.hours.forEach((h, hi) => {
     const row = document.createElement('div');
-    row.className = 'item-row';
+    row.className = 'card-item';
     row.innerHTML = `
-      <div>
-        <input type="text" placeholder="Tage" value="${escAttr(h.days)}" onchange="data.hoursLocation.hours[${hi}].days = this.value">
+      <button class="remove" onclick="removeHoursRow(${hi})">entfernen</button>
+      <div class="row2">
+        <div><label>Tage</label><input type="text" placeholder="Tage" value="${escAttr(h.days)}" onchange="data.hoursLocation.hours[${hi}].days = this.value"></div>
+        <div><label>Uhrzeit</label><input type="text" placeholder="Uhrzeit" value="${escAttr(h.time)}" onchange="data.hoursLocation.hours[${hi}].time = this.value"></div>
       </div>
-      <div>
-        <input type="text" placeholder="Uhrzeit" value="${escAttr(h.time)}" onchange="data.hoursLocation.hours[${hi}].time = this.value">
-      </div>
-      <button class="btn-remove" onclick="removeHoursRow(${hi})">×</button>
     `;
     wrap.appendChild(row);
   });
 }
-function addHoursRow() {
-  data.hoursLocation.hours.push({ days: '', time: '' });
-  renderHoursRows();
-}
-function removeHoursRow(hi) {
-  data.hoursLocation.hours.splice(hi, 1);
-  renderHoursRows();
-}
+function addHoursRow() { data.hoursLocation.hours.push({ days: '', time: '' }); renderHoursRows(); }
+function removeHoursRow(hi) { data.hoursLocation.hours.splice(hi, 1); renderHoursRows(); }
 
 function collectSimpleFields() {
   data.meta.restaurantName = document.getElementById('meta-restaurantName').value;
@@ -410,16 +429,20 @@ function collectSimpleFields() {
 function saveJson() {
   collectSimpleFields();
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url;
+  a.href = URL.createObjectURL(blob);
   a.download = 'content.json';
+  document.body.appendChild(a);
   a.click();
-  URL.revokeObjectURL(url);
+  a.remove();
+  setStatus('content.json heruntergeladen');
 }
 
 function escAttr(str) {
   return String(str || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+function escHtml(str) {
+  return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
 }
 
 function defaultData() {

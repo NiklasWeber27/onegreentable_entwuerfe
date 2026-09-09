@@ -5,56 +5,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Impressum — one_green table</title>
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#f2f0ea">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2060%2060%22%3E%3Crect%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2212%22%20fill%3D%22%232f8452%22/%3E%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20font-family%3D%22Georgia%2C%20serif%22%20font-style%3D%22italic%22%20font-size%3D%2234%22%20font-weight%3D%22600%22%20fill%3D%22%23fbfaf6%22%20text-anchor%3D%22middle%22%3Eg%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 <style>
-  .impressum-wrap { max-width: 720px; margin: 70px auto; padding: 0 32px; }
-  .impressum-panel { background: var(--panel); border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 26px 46px rgba(0,0,0,0.32); padding: 52px 48px; }
-  .impressum-panel h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.8rem; margin: 0 0 30px; }
-  .impressum-panel h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.15rem; margin: 34px 0 12px; }
-  .impressum-panel p { color: var(--muted); margin: 0 0 6px; line-height: 1.6; }
-  .impressum-panel a { color: var(--ink); }
-  .todo { color: #a8433f; font-family: 'Courier Prime', monospace; font-size: 0.85rem; }
-  .back-link { display: inline-block; margin-bottom: 24px; font-family: 'Courier Prime', monospace; font-size: 0.8rem; color: var(--muted); text-decoration: none; }
-  @media (max-width: 640px) { .impressum-panel { padding: 34px 24px; } }
+  .legal-body h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(1.6rem, 3vw, 2rem); margin: 0 0 34px; }
+  .legal-body h2 { font-family: 'Fraunces', serif; font-weight: 400; font-style: italic; font-size: 1.1rem; margin: 34px 0 12px; }
+  .legal-body h2:first-of-type { margin-top: 0; }
+  .legal-body p { color: var(--muted); margin: 0 0 8px; line-height: 1.65; max-width: 60ch; }
+  .legal-body a { color: var(--ink); }
+  .legal-body a:hover { color: var(--accent); }
+  .legal-todo { color: #a8433f; font-family: 'Courier Prime', monospace; font-size: 0.85rem; }
+  .legal-back { margin-bottom: 30px; }
 </style>
 </head>
 <body>
 
-<div class="impressum-wrap">
-  <a class="back-link" href="index.html">← Zurück zur Startseite</a>
-  <a class="back-link" href="datenschutz.html" style="margin-left:20px;">Datenschutzerklärung →</a>
-  <div class="impressum-panel">
-    <h1>Impressum</h1>
-
-    <h2>Angaben gemäß § 5 ECG, § 25 MedienG</h2>
-    <p>one_green table</p>
-    <p>Inhaberin: Sonja Kapplmüller</p>
-    <p>Defreggerstraße 21, 6020 Innsbruck, Österreich</p>
-
-    <h2>Kontakt</h2>
-    <p>Telefon: +43 660 6590525</p>
-    <p>E-Mail: onegreentable.ibk@gmail.com</p>
-
-    <h2>Unternehmensgegenstand</h2>
-    <p>Gastronomie / Restaurantbetrieb</p>
-
-    <h2>Gewerbebehörde & Berufsrecht</h2>
-    <p class="todo">[Gewerbeberechtigung / ausstellende Behörde ergänzen — z.B. Magistrat der Landeshauptstadt Innsbruck]</p>
-    <p class="todo">[Mitgliedschaft bei der Wirtschaftskammer Tirol, Fachgruppe Gastronomie — falls zutreffend]</p>
-    <p class="todo">[Gewerbeordnung: www.ris.bka.gv.at]</p>
-
-    <h2>UID-Nummer</h2>
-    <p class="todo">[UID-Nummer ergänzen, falls umsatzsteuerpflichtig registriert]</p>
-
-    <h2>Online-Streitbeilegung</h2>
-    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, aufrufbar unter <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
-
-    <h2>Urheberrecht</h2>
-    <p>Alle Inhalte dieser Website (Texte, Bilder) sind urheberrechtlich geschützt. Die Vervielfältigung, Bearbeitung oder Verbreitung außerhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung.</p>
+<nav>
+  <div class="wrap">
+    <span class="nav-name">one_green table</span>
+    <a class="nav-cta" href="index.html#reservierung">Reservieren</a>
   </div>
-</div>
+</nav>
+
+<section class="panel-wrap">
+  <div class="wrap">
+    <div class="panel legal-body">
+      <a class="btn legal-back" href="index.html">← Zur Startseite</a>
+
+      <h1>Impressum</h1>
+
+      <h2>Angaben gemäß § 5 ECG, § 25 MedienG</h2>
+      <p>one_green table</p>
+      <p>Inhaberin: Sonja Kapplmüller</p>
+      <p>Defreggerstraße 21, 6020 Innsbruck, Österreich</p>
+
+      <h2>Kontakt</h2>
+      <p>Telefon: +43 660 6590525</p>
+      <p>E-Mail: onegreentable.ibk@gmail.com</p>
+
+      <h2>Unternehmensgegenstand</h2>
+      <p>Gastronomie / Restaurantbetrieb</p>
+
+      <h2>Gewerbebehörde & Berufsrecht</h2>
+      <p class="legal-todo">[Gewerbeberechtigung / ausstellende Behörde ergänzen — z.B. Magistrat der Landeshauptstadt Innsbruck]</p>
+      <p class="legal-todo">[Mitgliedschaft bei der Wirtschaftskammer Tirol, Fachgruppe Gastronomie — falls zutreffend]</p>
+      <p class="legal-todo">[Gewerbeordnung: www.ris.bka.gv.at]</p>
+
+      <h2>UID-Nummer</h2>
+      <p class="legal-todo">[UID-Nummer ergänzen, falls umsatzsteuerpflichtig registriert]</p>
+
+      <h2>Online-Streitbeilegung</h2>
+      <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, aufrufbar unter <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+
+      <h2>Urheberrecht</h2>
+      <p>Alle Inhalte dieser Website (Texte, Bilder) sind urheberrechtlich geschützt. Die Vervielfältigung, Bearbeitung oder Verbreitung außerhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung.</p>
+
+      <p style="margin-top:36px;"><a class="btn" href="datenschutz.html">Zur Datenschutzerklärung →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; width:100%;">
+    <span>© 2026 one_green table</span>
+    <div class="footer-legal">
+      <a href="datenschutz.html">Datenschutz</a>
+      <span>·</span>
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
