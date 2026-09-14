@@ -6,13 +6,17 @@
 <title>one_green table — Ein Tisch. Ein Menü. Ein Abend.</title>
 <meta name="description" content="one_green table in Innsbruck-Pradl: ein gemeinsamer Tisch, ein fixes mehrgängiges Überraschungsmenü — bio, regional, saisonal.">
 <meta name="robots" content="index, follow">
-<!-- TODO: canonical + og:url auf die echte Domain setzen, sobald die Seite live ist -->
-<!-- <link rel="canonical" href="https://www.onegreentable.at/"> -->
+<link rel="canonical" href="https://www.onegreentable.at/">
+<meta property="og:url" content="https://www.onegreentable.at/">
 <meta property="og:title" content="one_green table — Ein Tisch. Ein Menü. Ein Abend.">
 <meta property="og:description" content="Ein gemeinsamer Tisch in Innsbruck-Pradl, ein fixes mehrgängiges Überraschungsmenü — bio, regional, saisonal.">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:locale" content="de_AT">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://www.onegreentable.at/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.onegreentable.at/assets/og-image.jpg">
 <meta name="theme-color" content="#f2f0ea">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +27,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
+  "url": "https://www.onegreentable.at/",
+  "image": "https://www.onegreentable.at/assets/og-image.jpg",
   "name": "one_green table",
   "servesCuisine": ["Vegetarian", "Vegan"],
   "description": "Ein gemeinsamer Tisch in Innsbruck-Pradl mit fixem, mehrgängigem Überraschungsmenü — bio, regional, saisonal.",
@@ -240,7 +246,7 @@ const FALLBACK_CONTENT = {
   },
   "hero": {
     "eyebrow": "PRADL, INNSBRUCK",
-    "headline": "Ein Tisch. Ein Menü.\nEin Abend.",
+    "headline": "Ein Tisch.\nEin Menü.\nEin Abend.",
     "subtext": "Bei one_green table sitzen alle Gäste an einem großen Tisch und bekommen ein fixes, mehrgängiges Überraschungsmenü — bio, regional, saisonal, mit Einflüssen aus aller Welt. Geleitet von Sonja Kapplmüller in der Defreggerstraße in Pradl."
   },
   "philosophy": {
@@ -265,7 +271,7 @@ const FALLBACK_CONTENT = {
         "label": "an einem gemeinsamen Tisch"
       },
       {
-        "value": "ca. 44 €",
+        "value": "46 €",
         "label": "pro Person, Getränke separat"
       }
     ]
@@ -312,7 +318,14 @@ const FALLBACK_CONTENT = {
   },
   "gallery": {
     "heading": "Einblicke",
-    "images": []
+    "images": [
+      "assets/gallery/interieur-tisch-1.jpg",
+      "assets/gallery/gericht-mais-fritter.jpg",
+      "assets/gallery/gericht-burrata-salat.jpg",
+      "assets/gallery/gericht-suppe.jpg",
+      "assets/gallery/interieur-tisch-2.jpg",
+      "assets/gallery/gericht-dessert.jpg"
+    ]
   },
   "reservation": {
     "heading": "Platz reservieren",
@@ -330,7 +343,7 @@ const FALLBACK_CONTENT = {
         "time": "19:00 – 22:00"
       },
       {
-        "days": "So, Mo",
+        "days": "So, Mo, Feiertage",
         "time": "Geschlossen"
       }
     ],
@@ -391,8 +404,33 @@ function render(data) {
   document.getElementById('gallery-heading').textContent = gallery.heading;
   const galBody = document.getElementById('gallery-body');
   if (gallery.images && gallery.images.length > 0) {
-    galBody.className = 'gallery-grid';
-    galBody.innerHTML = gallery.images.map(src => `<div><img src="${src}" alt="${meta.restaurantName}" loading="lazy"></div>`).join('');
+    galBody.className = 'gallery-carousel';
+    const slotCount = 3;
+    // Bilder auf 3 Slots verteilen (Slot 0 bekommt Bild 0,3 / Slot 1 bekommt 1,4 / Slot 2 bekommt 2,5 ...)
+    const slots = Array.from({ length: slotCount }, (_, i) =>
+      gallery.images.filter((_, idx) => idx % slotCount === i)
+    );
+    galBody.innerHTML = slots.map((imgs, si) => `
+      <div class="gallery-slot" id="gallery-slot-${si}">
+        ${imgs.map((src, i) => `<img src="${src}" alt="${meta.restaurantName}" loading="lazy" class="${i === 0 ? 'active' : ''}">`).join('')}
+      </div>
+    `).join('');
+
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion) {
+      slots.forEach((imgs, si) => {
+        if (imgs.length < 2) return;
+        let current = 0;
+        setInterval(() => {
+          const slotEl = document.getElementById(`gallery-slot-${si}`);
+          if (!slotEl) return;
+          const imgEls = slotEl.querySelectorAll('img');
+          imgEls[current].classList.remove('active');
+          current = (current + 1) % imgEls.length;
+          imgEls[current].classList.add('active');
+        }, 10000 + si * 1500);
+      });
+    }
   } else {
     galBody.className = 'gallery-placeholder';
     galBody.innerHTML = ['Foto folgt', 'Foto folgt', 'Foto folgt'].map(label => `

@@ -9,7 +9,7 @@
   },
   "hero": {
     "eyebrow": "PRADL, INNSBRUCK",
-    "headline": "Ein Tisch. Ein Menü.\nEin Abend.",
+    "headline": "Ein Tisch.\nEin Menü.\nEin Abend.",
     "subtext": "Bei one_green table sitzen alle Gäste an einem großen Tisch und bekommen ein fixes, mehrgängiges Überraschungsmenü — bio, regional, saisonal, mit Einflüssen aus aller Welt. Geleitet von Sonja Kapplmüller in der Defreggerstraße in Pradl."
   },
   "philosophy": {
@@ -27,7 +27,7 @@
     "facts": [
       { "value": "5 Gänge", "label": "Überraschungsmenü, wechselt saisonal" },
       { "value": "12 Plätze", "label": "an einem gemeinsamen Tisch" },
-      { "value": "ca. 44 €", "label": "pro Person, Getränke separat" }
+      { "value": "46 €", "label": "pro Person, Getränke separat" }
     ]
   },
   "reviews": {
@@ -48,7 +48,14 @@
   },
   "gallery": {
     "heading": "Einblicke",
-    "images": []
+    "images": [
+      "assets/gallery/interieur-tisch-1.jpg",
+      "assets/gallery/gericht-mais-fritter.jpg",
+      "assets/gallery/gericht-burrata-salat.jpg",
+      "assets/gallery/gericht-suppe.jpg",
+      "assets/gallery/interieur-tisch-2.jpg",
+      "assets/gallery/gericht-dessert.jpg"
+    ]
   },
   "reservation": {
     "heading": "Platz reservieren",
@@ -62,7 +69,7 @@
     "address": "Defreggerstraße 21, 6020 Innsbruck",
     "hours": [
       { "days": "Di – Sa", "time": "19:00 – 22:00" },
-      { "days": "So, Mo", "time": "Geschlossen" }
+      { "days": "So, Mo, Feiertage", "time": "Geschlossen" }
     ],
     "mapNote": "Pradl, wenige Gehminuten vom Pradler Platz",
     "mapQuery": "Defreggerstraße 21, 6020 Innsbruck"
